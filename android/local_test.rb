@@ -22,7 +22,7 @@ bs_local.start(bs_local_args)
 appium_driver = Appium::Driver.new({
 	'caps' => caps,
 	'appium_lib' => {
-		:server_url => "http://#{username}:#{access_key}@hub.browserstack.com/wd/hub"
+		:server_url => "http://#{username}:#{access_key}@hub-cloud.browserstack.com/wd/hub"
 	}}, true)
 driver = appium_driver.start_driver
 
