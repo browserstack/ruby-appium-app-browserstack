@@ -4,7 +4,7 @@
 - Install the appium_lib gem<br>
 `gem install 'appium_lib'`
 - Install the local bindings gem (if you need to run local tests)<br>
-`gem install 'browserstack/local'`
+`gem install 'browserstack-local'`
 
 ## Running your tests
 - Do remember to switch the USERNAME and ACCESS_KEY with your own browserstack credentials.
