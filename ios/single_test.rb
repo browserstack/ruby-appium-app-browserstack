@@ -9,7 +9,6 @@ caps = {}
 caps['build'] = 'Ruby Appium Sample'
 caps['name'] = 'single_test'
 caps['device'] = 'iPhone 7 Plus'
-caps['realMobile'] = true
 caps['browserstack.debug'] = true
 caps['app'] = 'bs://<hashed app-id>'
 
@@ -34,7 +33,7 @@ driver.find_element(:accessibility_id, "Next").click
 sleep 5
 
 results = driver.find_elements(:xpath, "//XCUIElementTypeStaticText")
-if results.map(&:text).any?{|x| x.match('not registered on WordPress.com')}
+if results.map(&:text).any?{|x| !x.nil? && x.match('not registered on WordPress.com')}
   puts "Test Passed"
 else
   puts "Test Failed"
