@@ -10,6 +10,7 @@ caps = {}
 caps['build'] = 'Ruby Appium Sample'
 caps['name'] = 'local_test'
 caps['device'] = 'iPhone 7 Plus'
+caps['platformName'] = 'iOS'
 caps['browserstack.local'] = true
 caps['browserstack.debug'] = true
 caps['app'] = 'bs://<hashed app-id>'
