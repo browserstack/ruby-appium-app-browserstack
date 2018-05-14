@@ -21,20 +21,20 @@ appium_driver = Appium::Driver.new({
 driver = appium_driver.start_driver
 
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-wait.until { driver.find_element(:accessibility_id, "Log In").displayed? }
-login_button = driver.find_element(:accessibility_id, "Log In")
-login_button.click
-
-wait.until { driver.find_element(:accessibility_id, "Email address").displayed? }
-email_input = driver.find_element(:accessibility_id, "Email address")
-email_input.send_keys("hello@browserstack.com")
-
-wait.until { driver.find_element(:accessibility_id, "Next").displayed? }
-driver.find_element(:accessibility_id, "Next").click
+wait.until { driver.find_element(:accessibility_id, "Text Button").displayed? }
+textButton = driver.find_element(:accessibility_id, "Text Button")
+textButton.click
+ 
+wait.until { driver.find_element(:accessibility_id, "Text Input").displayed? }
+textInput = driver.find_element(:accessibility_id, "Text Input")
+textInput.send_keys("hello@browserstack.com"+"\n")
+ 
 sleep 5
+ 
+wait.until { driver.find_element(:accessibility_id, "Text Output").displayed? }
+result = driver.find_element(:accessibility_id, "Text Output")
 
-results = driver.find_elements(:xpath, "//XCUIElementTypeStaticText")
-if results.map(&:text).any?{|x| !x.nil? && x.match('not registered on WordPress.com')}
+if (!result.nil?) && (result.text.eql? "hello@browserstack.com")
   puts "Test Passed"
 else
   puts "Test Failed"
