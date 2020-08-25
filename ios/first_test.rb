@@ -2,17 +2,6 @@ require 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
 
-username = 'BROWSERSTACK_USERNAME'
-access_key = 'BROWSERSTACK_ACCESS_KEY'
-
-caps = {}
-caps['build'] = 'Ruby Appium Sample'
-caps['name'] = 'single_test'
-caps['device'] = 'iPhone 7 Plus'
-caps['platformName'] = 'iOS'
-caps['browserstack.debug'] = true
-caps['app'] = 'bs://<hashed app-id>'
-
 caps = {}
 # Set your access credentials
 caps['browserstack.user'] = 'YOUR_USERNAME'
@@ -29,6 +18,9 @@ caps['os_version'] = "13"
 caps['project'] = 'First Ruby project'
 caps['build'] = 'Ruby iOS'
 caps['name'] = 'single_test'
+
+#Set the platform name
+caps['platformName'] = 'iOS'
 
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above

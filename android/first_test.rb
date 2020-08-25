@@ -19,6 +19,9 @@ caps['project'] = 'First Ruby project'
 caps['build'] = 'Ruby Android'
 caps['name'] = 'single_test'
 
+#Set the platform name
+caps['platformName'] = 'android'
+
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
 appium_driver = Appium::Driver.new({
