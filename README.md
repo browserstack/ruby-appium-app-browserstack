@@ -42,7 +42,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 ### **Run first test :**
 
-Open `first_test.rb` file for Android for ios folder
+Open `browserstack_sample_android.rb` file for Android folder or `browserstack_sample_iOS.rb` ios folder
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
@@ -52,7 +52,7 @@ Open `first_test.rb` file for Android for ios folder
 
 - If you have uploaded your own app update the test case
 
-- Run `ruby first_test.rb`
+- Run `ruby browserstack_sample_android.rb` or `ruby browserstack_sample_iOS.rb`
 
 For more details, refer to our documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/ruby)
 
