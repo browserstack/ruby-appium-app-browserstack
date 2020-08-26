@@ -42,7 +42,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 ### **Run first test :**
 
-Open `browserstack_sample_android.rb` file for Android folder or `browserstack_sample_iOS.rb` ios folder
+Open `browserstack_sample_android.rb` file for Android or `browserstack_sample_iOS.rb` for ios
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
