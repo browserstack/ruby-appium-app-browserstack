@@ -6,7 +6,7 @@ This repository demonstrates how to run Appium Ruby tests on BrowserStack App Au
 
 ### Requirements
 
-1. Ruby
+1. Ruby 2.2+
 
   - If not installed, install Ruby from [here](https://www.ruby-lang.org/en/documentation/installation/)
 
@@ -53,6 +53,8 @@ Open `browserstack_sample_android.rb` file for Android or `browserstack_sample_i
 - If you have uploaded your own app update the test case
 
 - Run `ruby browserstack_sample_android.rb` or `ruby browserstack_sample_iOS.rb`
+
+- You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
 For more details, refer to our documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/ruby)
 
