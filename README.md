@@ -16,7 +16,7 @@ This repository demonstrates how to run Appium Ruby tests on BrowserStack App Au
 
 ### Install the dependencies
 
-To install the dependencies, run the following command in the base directory :
+To install the dependencies, run the following command in the project's base directory :
 
 ```ruby
 bundle install

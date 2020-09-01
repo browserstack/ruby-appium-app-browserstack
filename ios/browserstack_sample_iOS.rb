@@ -31,7 +31,7 @@ appium_driver = Appium::Driver.new({
 	}}, true)
 driver = appium_driver.start_driver
 
-# Test case for the BrowserStack sample Android app. 
+# Test case for the BrowserStack sample iOS app. 
 # If you have uploaded your app, update the test case here. 
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 wait.until { driver.find_element(:accessibility_id, "Text Button").displayed? }
