@@ -3,29 +3,45 @@ require 'appium_lib'
 require 'selenium-webdriver'
 require 'browserstack/local'
 
-username = 'BROWSERSTACK_USERNAME'
-access_key = 'BROWSERSTACK_ACCESS_KEY'
+
+username = 'YOUR_USERNAME'
+access_key = 'YOUR_ACCESS_KEY'
 
 caps = {}
-caps['build'] = 'Ruby Appium Sample'
-caps['name'] = 'local_test'
-caps['device'] = 'iPhone 7 Plus'
-caps['platformName'] = 'iOS'
-caps['browserstack.local'] = true
-caps['browserstack.debug'] = true
-caps['app'] = 'bs://<hashed app-id>'
+# Set your access credentials
+caps['browserstack.user'] = username
+caps['browserstack.key'] = access_key
 
+# Set URL of the application under test
+caps['app'] = 'bs://<app-id>'
+
+# Specify device and os_version for testing
+caps['device'] = "iPhone 11 Pro"
+caps['os_version'] = "13"
+
+# Set other BrowserStack capabilities
+caps['project'] = 'First Ruby project'
+caps['build'] = 'Ruby iOS Local'
+caps['name'] = 'local_test'
+caps['platformName'] = 'iOS'
+caps['browserstack.debug'] = true
+
+# Start browserstack local
 bs_local = BrowserStack::Local.new
 bs_local_args = { "key" => access_key }
 bs_local.start(bs_local_args)
 
+# Initialize the remote Webdriver using BrowserStack remote URL
+# and desired capabilities defined above
 appium_driver = Appium::Driver.new({
   'caps' => caps,
   'appium_lib' => {
-    :server_url => "http://#{username}:#{access_key}@hub-cloud.browserstack.com/wd/hub"
+    :server_url => "http://hub-cloud.browserstack.com/wd/hub"
   }}, true)
 driver = appium_driver.start_driver
 
+# Initialize the remote Webdriver using BrowserStack remote URL
+# and desired capabilities defined above
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
 wait.until { driver.find_element(:accessibility_id, "TestBrowserStackLocal").displayed? }
 test_button = driver.find_element(:accessibility_id, "TestBrowserStackLocal")
@@ -44,5 +60,8 @@ else
   puts "Test Failed"
 end
 
+# Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit
+
+# Stop browserstack local
 bs_local.stop
