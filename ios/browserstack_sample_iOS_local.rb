@@ -19,6 +19,9 @@ caps['app'] = 'bs://<app-id>'
 caps['device'] = "iPhone 11 Pro"
 caps['os_version'] = "13"
 
+# Set browserstack.local capability as true
+caps['browserstack.local'] = true
+
 # Set other BrowserStack capabilities
 caps['project'] = 'First Ruby project'
 caps['build'] = 'Ruby iOS Local'
@@ -54,7 +57,7 @@ end
 
 result_element = driver.find_element(:accessibility_id, "ResultBrowserStackLocal")
 
-if result_element.text.match("Up and running")
+if result_element.text.match('Up and running')
   puts "Test Passed"
 else
   puts "Test Failed"
