@@ -86,6 +86,8 @@ Open `browserstack_sample_android_local.rb` file for Android or `browserstack_sa
 
 - Set the device and OS version
 
+- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using Ruby binding for BrowserStack Local. 
+
 - If you have uploaded your own app update the test case
 
 - Run `ruby browserstack_sample_android_local.rb` or `ruby browserstack_sample_iOS_local.rb`
