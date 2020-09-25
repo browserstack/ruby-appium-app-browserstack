@@ -42,6 +42,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 **Note**: If you do not have an .apk or .ipa file and are looking to simply try App Automate, you can download and test using our [sample Android app](https://www.browserstack.com/app-automate/sample-apps/android/WikipediaSample.apk) or [sample iOS app](https://www.browserstack.com/app-automate/sample-apps/ios/BStackSampleApp.ipa).
 
 **2. Configure and run your first test**
+
 Open `browserstack_sample_android.rb` file for Android or `browserstack_sample_iOS.rb` for ios
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
@@ -76,6 +77,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 
 **2. Configure and run your local test**
+
 Open `browserstack_sample_android_local.rb` file for Android or `browserstack_sample_iOS_local.rb` for ios
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
