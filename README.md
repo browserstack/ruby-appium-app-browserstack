@@ -43,7 +43,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **2. Configure and run your first test**
 
-Open `browserstack_sample.rb` file in `Android` or `iOS` directory :
+Open `browserstack_sample.rb` file in `android` or `ios` directory :
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
@@ -78,7 +78,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **2. Configure and run your local test**
 
-Open `browserstack_sample_local.rb` file in `Android` or `iOS` directory :
+Open `browserstack_sample_local.rb` file in `android` or `ios` directory :
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
