@@ -43,7 +43,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **2. Configure and run your first test**
 
-Open `browserstack_sample_android.rb` file for Android or `browserstack_sample_iOS.rb` for ios :
+Open `browserstack_sample.rb` file in `Android` or `iOS` directory :
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
@@ -53,7 +53,7 @@ Open `browserstack_sample_android.rb` file for Android or `browserstack_sample_i
 
 - If you have uploaded your own app update the test case
 
-- Run `ruby browserstack_sample_android.rb` or `ruby browserstack_sample_iOS.rb`
+- Run `ruby browserstack_sample.rb`
 
 - You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
@@ -78,7 +78,7 @@ Ensure that @ symbol is prepended to the file path in the above request. Please 
 
 **2. Configure and run your local test**
 
-Open `browserstack_sample_android_local.rb` file for Android or `browserstack_sample_iOS_local.rb` for ios :
+Open `browserstack_sample_local.rb` file in `Android` or `iOS` directory :
 
 - Replace `YOUR_USERNAME` & `YOUR_ACCESS_KEY` with your BrowserStack access credentials
 
@@ -90,7 +90,7 @@ Open `browserstack_sample_android_local.rb` file for Android or `browserstack_sa
 
 - If you have uploaded your own app update the test case
 
-- Run `ruby browserstack_sample_android_local.rb` or `ruby browserstack_sample_iOS_local.rb`
+- Run `ruby browserstack_sample_local.rb`
 
 - You can access the test execution results, and debugging information such as video recording, network logs on [App Automate dashboard](https://app-automate.browserstack.com/dashboard)
 
