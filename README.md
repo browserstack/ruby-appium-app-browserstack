@@ -22,6 +22,14 @@ To install the dependencies, run the following command in the project's base dir
 bundle install
 ```
 
+**Note**: If you are using Windows, RubyInstaller has a known [issue](https://github.com/oneclick/rubyinstaller2/issues/96). Run the following script as a workaround to resolve it -
+
+```ruby
+gem install ffi
+gem uninstall -aIx eventmachine
+gem install eventmachine --platform=ruby
+```
+
 ## Getting Started
 
 Getting Started with Appium tests in Ruby on BrowserStack couldn't be easier!
