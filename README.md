@@ -6,7 +6,7 @@ This repository demonstrates how to run Appium Ruby tests on BrowserStack App Au
 
 ### Requirements
 
-1. Ruby 2.2+
+1. Ruby >=2.6
 
   - If not installed, install Ruby from [here](https://www.ruby-lang.org/en/documentation/installation/)
 
