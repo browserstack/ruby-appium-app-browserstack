@@ -23,7 +23,7 @@ caps['browserstack.local'] = true
 
 # Set other BrowserStack capabilities
 caps['project'] = 'First Ruby project'
-caps['build'] = 'Ruby Android Local'
+caps['build'] = 'browserstack-build-1'
 caps['name'] = 'local_test'
 caps['platformName'] = 'android'
 caps['browserstack.debug'] = true

@@ -24,7 +24,7 @@ caps['browserstack.local'] = true
 
 # Set other BrowserStack capabilities
 caps['project'] = 'First Ruby project'
-caps['build'] = 'Ruby iOS Local'
+caps['build'] = 'browserstack-build-1'
 caps['name'] = 'local_test'
 caps['platformName'] = 'iOS'
 caps['browserstack.debug'] = true
