@@ -16,7 +16,7 @@ caps['os_version'] = '9.0'
 
 # Set other BrowserStack capabilities
 caps['project'] = 'First Ruby project'
-caps['build'] = 'Ruby Android'
+caps['build'] = 'browserstack-build-1'
 caps['name'] = 'single_test'
 
 #Set the platform name
