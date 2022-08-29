@@ -3,31 +3,29 @@ require 'appium_lib'
 require 'selenium-webdriver'
 require 'browserstack/local'
 
+capabilities = {
+	# Specify device and os_version for testing
+	"platformName" => "iOS",
+	"platformVersion" => "12",
+	"deviceName" => "iPhone XS",
 
-username = 'YOUR_USERNAME'
-access_key = 'YOUR_ACCESS_KEY'
+	# Set URL of the application under test
+	"app" => "bs://bs://<appID>",
 
-caps = {}
-# Set your access credentials
-caps['browserstack.user'] = username
-caps['browserstack.key'] = access_key
+	# Set other BrowserStack capabilities
+	'bstack:options' => {
+		"projectName" => "First Ruby project",
+		"buildName" => "browserstack-build-1",
+		"sessionName" => "single_test",
+		"debug" => "true",
+    "local" => "true"
+		"networkLogs" => "true",
 
-# Set URL of the application under test
-caps['app'] = 'bs://<app-id>'
-
-# Specify device and os_version for testing
-caps['device'] = "iPhone 11 Pro"
-caps['os_version'] = "13"
-
-# Set browserstack.local capability as true
-caps['browserstack.local'] = true
-
-# Set other BrowserStack capabilities
-caps['project'] = 'First Ruby project'
-caps['build'] = 'browserstack-build-1'
-caps['name'] = 'local_test'
-caps['platformName'] = 'iOS'
-caps['browserstack.debug'] = true
+		# Set your access credentials
+		"userName": "BROWSERSTACK_USERNAME",
+    "accessKey": "BROWSERSTACK_ACCESS_KEY"
+	},
+}
 
 # Start browserstack local
 bs_local = BrowserStack::Local.new
@@ -39,7 +37,7 @@ bs_local.start(bs_local_args)
 appium_driver = Appium::Driver.new({
   'caps' => caps,
   'appium_lib' => {
-    :server_url => "http://hub-cloud.browserstack.com/wd/hub"
+    :server_url => "http://hub.browserstack.com/wd/hub"
   }}, true)
 driver = appium_driver.start_driver
 
