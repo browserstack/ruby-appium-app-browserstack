@@ -15,7 +15,7 @@ capabilities = {
 	'bstack:options' => {
 		"projectName" => "First Ruby project",
 		"buildName" => "browserstack-build-1",
-		"sessionName" => "single_test",
+		"sessionName" => "BStack single_test",
 		"debug" => "true",
 		"networkLogs" => "true",
 
