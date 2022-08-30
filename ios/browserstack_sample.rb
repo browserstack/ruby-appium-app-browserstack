@@ -9,7 +9,7 @@ capabilities = {
 	"deviceName" => "iPhone 11 Pro",
 
 	# Set URL of the application under test
-	"app" => "bs://bs://<appID>",
+	"app" => "bs://<appID>",
 
 	# Set other BrowserStack capabilities
 	'bstack:options' => {
