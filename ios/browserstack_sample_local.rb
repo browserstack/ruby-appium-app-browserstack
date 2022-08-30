@@ -39,7 +39,7 @@ bs_local.start(bs_local_args)
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
 appium_driver = Appium::Driver.new({
-  'caps' => caps,
+  'caps' => capabilities,
   'appium_lib' => {
     :server_url => "http://hub.browserstack.com/wd/hub"
   }}, true)
