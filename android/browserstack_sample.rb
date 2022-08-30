@@ -1,11 +1,11 @@
-require 'rubygems'
+Derequire 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
 
 caps = {}
 # Set your access credentials
-caps['browserstack.user'] = 'YOUR_USERNAME'
-caps['browserstack.key'] = 'YOUR_ACCESS_KEY'
+caps['browserstack.user'] = 'ysmnturut_aqNVOR'
+caps['browserstack.key'] = 'n8WqPYcXQNBwiDmi8K8H'
 
 # Set URL of the application under test
 caps['app'] = 'bs://<app-id>'
