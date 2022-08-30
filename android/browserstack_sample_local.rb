@@ -3,6 +3,10 @@ require 'appium_lib'
 require 'selenium-webdriver'
 require 'browserstack/local'
 
+# Set your access credentials
+user_name = "BROWSERSTACK_USERNAME"
+access_key = "BROWSERSTACK_ACCESS_KEY"
+
 capabilities = {
 	# Specify device and os_version for testing
 	"platformName" => "android",
@@ -21,9 +25,9 @@ capabilities = {
 		"local" => "true",
 		"networkLogs" => "true",
 
-		# Set your access credentials
-		"userName": "BROWSERSTACK_USERNAME",
-    "accessKey": "BROWSERSTACK_ACCESS_KEY"
+		
+		"userName": user_name,
+    "accessKey": access_key
 	},
 }
 
