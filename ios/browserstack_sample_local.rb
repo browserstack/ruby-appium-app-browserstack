@@ -18,7 +18,7 @@ capabilities = {
 		"buildName" => "browserstack-build-1",
 		"sessionName" => "single_test",
 		"debug" => "true",
-    "local" => "true"
+    "local" => "true",
 		"networkLogs" => "true",
 
 		# Set your access credentials
