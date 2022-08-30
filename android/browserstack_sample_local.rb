@@ -25,7 +25,6 @@ capabilities = {
 		"local" => "true",
 		"networkLogs" => "true",
 
-		
 		"userName": user_name,
     "accessKey": access_key
 	},
