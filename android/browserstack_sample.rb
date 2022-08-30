@@ -9,7 +9,7 @@ capabilities = {
 	"deviceName" => "Google Pixel 3",
 
 	# Set URL of the application under test
-	"app" => "bs://b8fc2f550dee29a650835da5c1e1a1cfac4d1821",
+	"app" => "bs://bs://<appID>",
 
 	# Set other BrowserStack capabilities
 	'bstack:options' => {
@@ -20,8 +20,8 @@ capabilities = {
 		"networkLogs" => "true",
 
 		# Set your access credentials
-		"userName": "avinashbharti_2VdzKZ",
-    "accessKey": "F7EkSyLimdVXj7JXyjWz"
+		"userName": "BROWSERSTACK_USERNAME",
+    "accessKey": "BROWSERSTACK_ACCESS_KEY"
 	},
 }
 
