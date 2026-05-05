@@ -4,8 +4,8 @@ require 'selenium-webdriver'
 
 caps = {}
 # Set your access credentials
-caps['browserstack.user'] = 'bhuwankashyap_vKETCb'
-caps['browserstack.key'] = 'EduWT5j69HyrJAyBnxMz'
+caps['browserstack.user'] = ENV['BROWSERSTACK_USERNAME'] || 'YOUR_USERNAME'
+caps['browserstack.key'] = ENV['BROWSERSTACK_ACCESS_KEY'] || 'YOUR_ACCESS_KEY'
 
 # Set URL of the application under test
 caps['app'] = 'bs://e062a41d22626330df16b78ddf43fb319f078be2'
