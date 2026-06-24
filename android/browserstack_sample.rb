@@ -1,54 +1,48 @@
 require 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
-
 caps = {}
 # Set your access credentials
-caps['browserstack.user'] = 'YOUR_USERNAME'
-caps['browserstack.key'] = 'YOUR_ACCESS_KEY'
-
+caps['browserstack.user'] = 'christinamarie_Fi3wpZ'
+caps['browserstack.key'] = 't3La1pRW7H2bqmAs4ppr'
 # Set URL of the application under test
-caps['app'] = 'bs://<app-id>'
-
+caps['app'] = 'bs://444bd0308813ae0dc236f8cd461c02d3afa7901d'
 # Specify device and os_version for testing
-caps['device'] = 'Google Pixel 3'
-caps['os_version'] = '9.0'
-
+caps['device'] = 'iPhone 15 Pro Max'
+caps['os_version'] = '17'
 # Set other BrowserStack capabilities
 caps['project'] = 'First Ruby project'
 caps['build'] = 'browserstack-build-1'
 caps['name'] = 'single_test'
-
 #Set the platform name
-caps['platformName'] = 'android'
-
+caps['platformName'] = 'iOS'
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
 appium_driver = Appium::Driver.new({
 	'caps' => caps,
 	'appium_lib' => {
-		:server_url => "http://hub-cloud.browserstack.com/wd/hub"
+		:server_url => "https://hub-cloud.browserstack.com/wd/hub"
 	}}, true)
 driver = appium_driver.start_driver
-
-# Test case for the BrowserStack sample Android app. 
+# Test case for the BrowserStack sample iOS app. 
 # If you have uploaded your app, update the test case here. 
 wait = Selenium::WebDriver::Wait.new(:timeout => 30)
-wait.until { driver.find_element(:accessibility_id, "Search Wikipedia").displayed? }
-element = driver.find_element(:accessibility_id, "Search Wikipedia")
-element.click
-
-wait.until { driver.find_element(:id, "org.wikipedia.alpha:id/search_src_text").displayed? }
-search_box = driver.find_element(:id, "org.wikipedia.alpha:id/search_src_text")
-search_box.send_keys("BrowserStack")
+wait.until { driver.find_element(:accessibility_id, "Text Button").displayed? }
+textButton = driver.find_element(:accessibility_id, "Text Button")
+textButton.click
+ 
+wait.until { driver.find_element(:accessibility_id, "Text Input").displayed? }
+textInput = driver.find_element(:accessibility_id, "Text Input")
+textInput.send_keys("hello@browserstack.com"+"\n")
+ 
 sleep 5
-
-results = driver.find_elements(:class, "android.widget.TextView")
-if results.count > 0
-	puts "Found results - Test Passed"
+ 
+wait.until { driver.find_element(:accessibility_id, "Text Output").displayed? }
+result = driver.find_element(:accessibility_id, "Text Output")
+if (!result.nil?) && (result.text.eql? "hello@browserstack.com")
+  puts "Test Passed"
 else
-	puts "No results found - Test Failed"
+  puts "Test Failed"
 end
-
 # Invoke driver.quit() after the test is done to indicate that the test is completed.
 driver.quit
