@@ -2,6 +2,12 @@
 
 This repository demonstrates how to run Appium Ruby tests on BrowserStack App Automate.
 
+## Based on
+
+These code samples are currently based on:
+
+- **appium_lib:** `12.0.1`
+- **Protocol:** `W3C`
 ## Setup
 
 ### Requirements
@@ -94,7 +100,7 @@ Open `browserstack_sample_local.rb` file in `android` or `ios` directory :
 
 - Set the device and OS version
 
-- Ensure that `browserstack.local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using Ruby binding for BrowserStack Local. 
+- Ensure that `local` capability is set to `true`. Within the test script, there is code snippet that automatically establishes Local Testing connection to BrowserStack servers using Ruby binding for BrowserStack Local. 
 
 - If you have uploaded your own app update the test case
 

@@ -2,32 +2,35 @@ require 'rubygems'
 require 'appium_lib'
 require 'selenium-webdriver'
 
-caps = {}
-# Set your access credentials
-caps['browserstack.user'] = 'YOUR_USERNAME'
-caps['browserstack.key'] = 'YOUR_ACCESS_KEY'
+capabilities = {
+	# Specify device and os_version for testing
+	"platformName" => "android",
+	"platformVersion" => "9.0",
+	"deviceName" => "Google Pixel 3",
 
-# Set URL of the application under test
-caps['app'] = 'bs://<app-id>'
+	# Set URL of the application under test
+	"app" => "bs://<appID>",
 
-# Specify device and os_version for testing
-caps['device'] = 'Google Pixel 3'
-caps['os_version'] = '9.0'
+	# Set other BrowserStack capabilities
+	'bstack:options' => {
+		"projectName" => "First Ruby project",
+		"buildName" => "browserstack-build-1",
+		"sessionName" => "BStack single_test",
+		"debug" => "true",
+		"networkLogs" => "true",
 
-# Set other BrowserStack capabilities
-caps['project'] = 'First Ruby project'
-caps['build'] = 'browserstack-build-1'
-caps['name'] = 'single_test'
-
-#Set the platform name
-caps['platformName'] = 'android'
+		# Set your access credentials
+		"userName": "BROWSERSTACK_USERNAME",
+    "accessKey": "BROWSERSTACK_ACCESS_KEY"
+	},
+}
 
 # Initialize the remote Webdriver using BrowserStack remote URL
 # and desired capabilities defined above
 appium_driver = Appium::Driver.new({
-	'caps' => caps,
+	'caps' => capabilities,
 	'appium_lib' => {
-		:server_url => "http://hub-cloud.browserstack.com/wd/hub"
+		:server_url => "http://hub.browserstack.com/wd/hub"
 	}}, true)
 driver = appium_driver.start_driver
 
